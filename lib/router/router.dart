@@ -1177,7 +1177,7 @@ getRouters({
             pageBuilder: (context, state) => noTransition(
               context: context,
               state: state,
-              child: const HtProductCrudFormView(),
+              child: const HtProductCrudFormView(item: {}),
             ),
           ),
           GoRoute(
