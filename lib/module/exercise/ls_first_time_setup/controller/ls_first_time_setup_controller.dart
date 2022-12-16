@@ -47,6 +47,10 @@ class LsFirstTimeSetupController extends State<LsFirstTimeSetupView>
     2. Nice, lanjut ke point 3
     */
     setState(() {});
+    if (firstTimeSetup!) {
+      Get.offAll(const LsFirstTimeSetupDashboardView());
+      return;
+    }
   }
 
   submit() async {
@@ -66,6 +70,10 @@ class LsFirstTimeSetupController extends State<LsFirstTimeSetupView>
     Apakah kamu langsung di arahkan ke halaman dashboard?
     Jika ya, tasks ini selesai~
     */
+
+    await mainStorage.put("first_time_setup", true);
+    firstTimeSetup = await mainStorage.get("first_time_setup") ?? false;
+    Get.offAll(const LsFirstTimeSetupDashboardView());
   }
 
   delete() async {
