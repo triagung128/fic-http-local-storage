@@ -1,4 +1,4 @@
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 
@@ -26,12 +26,12 @@ class UiDailiyTodoListView extends StatefulWidget {
             const Text("Back"),
           ],
         ),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Badge(
-              badgeContent: const Text("2"),
-              child: const Icon(Icons.notifications),
+            padding: EdgeInsets.all(12.0),
+            child: badges.Badge(
+              badgeContent: Text("2"),
+              child: Icon(Icons.notifications),
             ),
           ),
         ],

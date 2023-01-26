@@ -1,4 +1,4 @@
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badges;
 import 'package:example/core.dart';
 
 import 'package:flutter/material.dart';
@@ -13,7 +13,7 @@ class BadgeText extends StatefulWidget {
   final bool outline;
   final Color? foregroundColor;
   final String? badgeText;
-  final BadgePosition? position;
+  final badges.BadgePosition? position;
   final Widget? badgeContent;
 
   const BadgeText({
@@ -46,7 +46,7 @@ class _BadgeTextState extends State<BadgeText> {
 
   @override
   Widget build(BuildContext context) {
-    return Badge(
+    return badges.Badge(
       showBadge: widget.showBadge!,
       position: widget.position,
       badgeContent: widget.badgeContent,

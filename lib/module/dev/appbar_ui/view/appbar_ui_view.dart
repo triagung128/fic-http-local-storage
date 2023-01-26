@@ -1,4 +1,4 @@
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badges;
 import 'package:custom_clippers/custom_clippers.dart';
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
@@ -250,22 +250,22 @@ class AppbarUiView extends StatefulWidget {
                   appBar: AppBar(
                     leading: const Icon(Icons.menu),
                     title: const Text("Jessica"),
-                    actions: [
+                    actions: const [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Badge(
-                          badgeContent: const Text('2'),
-                          child: const Icon(Icons.chat),
+                        padding: EdgeInsets.all(8.0),
+                        child: badges.Badge(
+                          badgeContent: Text('2'),
+                          child: Icon(Icons.chat),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Badge(
-                          badgeContent: const Text('3'),
-                          child: const Icon(Icons.notifications),
+                        padding: EdgeInsets.all(8.0),
+                        child: badges.Badge(
+                          badgeContent: Text('3'),
+                          child: Icon(Icons.notifications),
                         ),
                       ),
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.all(8.0),
                         child: CircleAvatar(
                           backgroundColor: Colors.orange,
@@ -291,22 +291,22 @@ class AppbarUiView extends StatefulWidget {
                   appBar: AppBar(
                     leading: const Icon(Icons.menu),
                     title: const Text("Jessica"),
-                    actions: [
+                    actions: const [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Badge(
-                          badgeContent: const Text('2'),
-                          child: const Icon(Icons.chat),
+                        padding: EdgeInsets.all(8.0),
+                        child: badges.Badge(
+                          badgeContent: Text('2'),
+                          child: Icon(Icons.chat),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Badge(
-                          badgeContent: const Text('3'),
-                          child: const Icon(Icons.notifications),
+                        padding: EdgeInsets.all(8.0),
+                        child: badges.Badge(
+                          badgeContent: Text('3'),
+                          child: Icon(Icons.notifications),
                         ),
                       ),
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.all(8.0),
                         child: CircleAvatar(
                           backgroundColor: Colors.orange,
@@ -328,18 +328,18 @@ class AppbarUiView extends StatefulWidget {
                     leading: const Icon(Icons.menu),
                     title: const Text("Jessica"),
                     actions: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Badge(
-                          badgeContent: const Text('2'),
-                          child: const Icon(Icons.chat),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: badges.Badge(
+                          badgeContent: Text('2'),
+                          child: Icon(Icons.chat),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Badge(
-                          badgeContent: const Text('3'),
-                          child: const Icon(Icons.notifications),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: badges.Badge(
+                          badgeContent: Text('3'),
+                          child: Icon(Icons.notifications),
                         ),
                       ),
                       IconButton(
